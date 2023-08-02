@@ -1,0 +1,36 @@
+@media (max-width: 950px) {
+    #page-home {
+        background-position-x: 100vw;
+    }
+
+    #page-home .content {
+        align-items: center;
+        text-align: center;
+    }
+
+    #page-home header a {
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #page-home main {
+        align-items: center;
+    }
+}
+
+@media (max-width: 500px) {
+    #page-home main h1 {
+        font-size: 40px;
+    }
+
+    #page-home main p {
+        font-size: 18px;
+    }
+
+    #page-home header a  {
+        width: 100%;
+        justify-content: center;
+    }
+}

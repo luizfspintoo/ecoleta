@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+:root{
+    --color-azul: #322153;
+    --color-cinza: #6C6C80;
+    --color-verde: #34CB79;
+    --color-verde-escuro: #28bb6a;
+}
+
+body {
+    background-color: #F0F0F5;
+}
+
+
