@@ -22,10 +22,6 @@
     margin-top: 25px;
 }
 
-a {
-    text-decoration: none;
-}
-
 #page-home header a {
     display: flex;
     align-items: center;
@@ -35,9 +31,9 @@ a {
 
 #page-home header a span {
     display: flex;
-    margin-right: 20px;
-    width: 25px;
-    height: 25px;
+    margin-right: 16px;
+    width: 22px;
+    height: 22px;
     background: url('../assets/login.svg') no-repeat;
 }
 

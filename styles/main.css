@@ -10,6 +10,7 @@ html {
 
 :root{
     --color-azul: #322153;
+    --color-cinza-escuro: #6C6C80;
     --color-cinza: #6C6C80;
     --color-verde: #34CB79;
     --color-verde-escuro: #28bb6a;
@@ -19,4 +20,7 @@ body {
     background-color: #F0F0F5;
 }
 
+a {
+    text-decoration: none;
+}
 
