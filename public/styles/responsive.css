@@ -69,4 +69,9 @@
     #page-create-point form {
         padding: 40px 30px;
     }
-}
+
+    form button {
+        display: block;
+        margin: 40px auto auto;
+    }
+    }
