@@ -37,6 +37,10 @@
         flex-direction: column;
     }
 
+    form .field-group {
+        gap: 0;
+    }
+
 }
 
 @media screen and (max-width: 628px){
@@ -74,4 +78,10 @@
         display: block;
         margin: 40px auto auto;
     }
+
+    form fieldset legend {
+        flex-direction: column;
+        gap: 10px;
+        align-items: start;
     }
+}

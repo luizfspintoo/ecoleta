@@ -1,65 +1,44 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+{% extends "layout.html"%}
 
-    <link rel="stylesheet" href="/styles/main.css">
+{%block styles%}
     <link rel="stylesheet" href="/styles/home.css">
     <link rel="stylesheet" href="/styles/modal.css">
-    <link rel="stylesheet" href="/styles/responsive.css">
-    <title>Ecoleta Marketplace</title>
-</head>
-<body>
-    <div id="page-home">
-        <div class="content">
-            <header>
-                <img src="/assets/logo.svg" alt="Logo do Ecoleta, escrito com a cor azul escuro com simbolo de coleta">
-                <a href="/create-point.html">
-                    <span></span>
-                    Cadastre um ponto de coleta
-                </a>
-            </header>
+{%endblock styles%}
 
-            <main>
-                <h1>Seu marketplace de coleta de resíduos</h1>
-                
-                <p>
-                    Ajudamos pessoas a encontrar pontos de coleta de maneira eficeiente.
-                </p>
-                
-                <a href="#">
-                    <span></span>
-                    <strong>Pesquisar pontos de coleta</strong>
-                </a>
-            </main>
-        
-        </div>
-    </div>
+<title>Ecoleta Marketplace</title>
 
-    <div id="modal" class="hide">
-        <div class="content">
-            <div class="header">
-                <h1>Pontos de coleta</h1>
-                <a href="#">Fechar</a>
-            </div>
-            <form action="/search-results.html">
-                <label for="search">Cidade</label>
-                <div class="search field">
-                    <input type="text" name="search" placeholder="Pesquise por cidade">
-                    <button>
-                        Buscar
-                    </button>
-                </div>
-            </form>
-        </div>
+{% set pageId = "page-home"%}
+<!-- <div id="page-home"> -->
+{%block content%}
+    <div class="content">
+        <header>
+            <img src="/assets/logo.svg" alt="Logo do Ecoleta, escrito com a cor azul escuro com simbolo de coleta">
+            <a href="/create-point">
+                <span></span>
+                Cadastre um ponto de coleta
+            </a>
+        </header>
+
+        <main>
+            <h1>{{title}}</h1>
+
+            <p>
+                Ajudamos pessoas a encontrar pontos de coleta de maneira eficeiente.
+            </p>
+
+            <a href="#">
+                <span></span>
+                <strong>Pesquisar pontos de coleta</strong>
+            </a>
+        </main>
+
     </div>
-    <script src="/scripts/modal.js"></script>
-</body>
-</html>
+{%endblock content%}
+
+{%block modal%}
+    {% include "partials/modal.html" %}
+{%endblock modal%}
+
+{%block scripts%}
+    <script src="/scripts/modal.js"></script> 
+{%endblock scripts%}

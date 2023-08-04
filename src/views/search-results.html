@@ -1,57 +1,41 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+{% extends "layout.html"%}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="/styles/main.css">
-    <link rel="stylesheet" href="/styles/search-rersults.css">
-    <link rel="stylesheet" href="/styles/responsive.css">
-    <title>Criar ponto de coleta</title>
-</head>
+{%block styles%}
+<link rel="stylesheet" href="/styles/search-rersults.css">
+{%endblock styles%}
 
-<body>
-    <div id="page-search-results">
-        <header>
-            <img src="/assets/logo.svg" alt="Logo do Ecoleta, escrito com a cor azul escuro com simbolo de coleta">
-            <a href="/">
-                <span></span>
-                Voltar para home
-            </a>
-        </header>
-        <main>
-            <h4>
-                <strong>2 pontos</strong> encontrados
-            </h4>
+{%block title%}
+    <title>Resultados pontos</title>
+{%endblock title%}
 
-            <div class="cards">
-                <div class="card">
-                    <img src="/assets/recilagem.jpg" alt="Coleteria">
-                    <h1>Coleteria</h1>
-                    <h3>Resídeos eletrônicos</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, harum facilis optio accusantium ut, neque mollitia eum ullam
-                    </p>
-                </div>
-                <div class="card">
-                    <img src="/assets/papelao.jpg" alt="Paperside">
-                    <h1>Paperside</h1>
-                    <h3>Resídeos eletrônicos</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, harum facilis optio accusantium ut, neque mollitia eum ullam
-                    </p>
-                </div>
+{% set pageId = "page-search-results"%}
+{%block content%}
+    {% include "partials/page-header.html"%}
+    <main>
+        <h4>
+            <strong>2 pontos</strong> encontrados
+        </h4>
+
+        <div class="cards">
+            <div class="card">
+                <img src="/assets/recilagem.jpg" alt="Coleteria">
+                <h1>Coleteria</h1>
+                <h3>Resídeos eletrônicos</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, harum facilis optio accusantium ut, neque
+                    mollitia eum ullam
+                </p>
             </div>
-        </main>
-    </div>
-   
-</body>
-
-</html>
+            <div class="card">
+                <img src="/assets/papelao.jpg" alt="Paperside">
+                <h1>Paperside</h1>
+                <h3>Resídeos eletrônicos</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, harum facilis optio accusantium ut, neque
+                    mollitia eum ullam
+                </p>
+            </div>
+        </div>
+    </main>
+{%endblock content%}

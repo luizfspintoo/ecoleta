@@ -30,9 +30,9 @@
 #page-create-point form {
     background-color: white;
     padding: 64px;
+    width: 100%;
+    max-width: 800px;
     border-radius: 8px;
-    max-width: 736px;
-
     margin: 76px auto;
 }
 
@@ -48,7 +48,19 @@
 
 form fieldset legend h2 {
     color: var(--color-azul);
+}
+
+form fieldset legend {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
     margin-bottom: 43px;
+}
+
+form fieldset legend span {
+    color: var(--color-cinza-escuro);
+    font-size: 14px;
 }
 
 form .field {
