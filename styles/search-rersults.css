@@ -1,0 +1,82 @@
+#page-search-results {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+#page-search-results header {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#page-search-results header a {
+    color: var(--color-azul);
+    font-weight: 700;
+    align-items: center;
+    display: flex;
+}
+
+#page-search-results header a span {
+    background: url('../assets/voltar.svg') no-repeat;
+    width: 22px;
+    height: 22px;
+    display: flex;
+
+    margin-right: 16px;
+}
+
+#page-search-results main {
+    margin: 48px 0;
+}
+
+#page-search-results main img {
+    width: 100%;
+    height: 180px;
+    border-radius: 8px;
+    margin-bottom: 22px;
+
+    object-fit: cover;
+}
+
+#page-search-results main h4 {
+    font-weight: normal;
+    color: #6C6C80;
+    font-family: Roboto, sans-serif;
+    margin-bottom: 40px;
+}
+
+#page-search-results main .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 32px; 
+}
+
+#page-search-results main .card h1 {
+    color: var(--color-azul);
+    font-family: Ubuntu, sans-serif;
+    margin-bottom: 22px;
+}
+
+#page-search-results main .card h3 {
+    color: var(--color-verde);
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 22px;
+}
+
+#page-search-results main .card p {
+    color: #6C6C80;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    background-color: rgb(255, 255, 255);
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    height: 340px;
+}
