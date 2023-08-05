@@ -83,3 +83,12 @@
     transition: 0.4s ease-in-out;
     display: none;
 }
+
+#modal .header.point {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    flex-direction: column;
+    gap: 20px;
+}

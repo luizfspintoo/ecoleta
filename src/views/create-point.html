@@ -2,6 +2,7 @@
 
 {%block styles%}
     <link rel="stylesheet" href="/styles/create-point.css">
+    <link rel="stylesheet" href="/styles/modal.css">
 {%endblock styles%}
 
 {%block title%}
@@ -12,7 +13,7 @@
 
 {%block content%}
     {% include "partials/page-header.html"%}
-    <form action="#">
+    <form action="/save-point" method="post">
         <h1>Cadastro do ponto de coleta</h1>
         <fieldset>
             <legend>
@@ -24,8 +25,8 @@
                     <input type="text" name="name" required>
                 </div>
                 <div class="field">
-                    <label for="url">Link da imagem</label>
-                    <input type="url" name="url" placeholder="Ex: http://" required>
+                    <label for="image">Link da imagem</label>
+                    <input type="url" name="image" placeholder="Ex: http://" required>
                 </div>
             </div>
 
@@ -69,23 +70,23 @@
                 </li>
                 <li data-id="2">
                     <img src="/assets/baterias.svg" alt="Icone de pilha e bateria">
-                    <span>Lâmpadas</span>
+                    <span>Pilhas e Baterias</span>
                 </li>
                 <li data-id="3">
                     <img src="/assets/papeis-e-apelao.svg" alt="Icone de papéis e papelão">
-                    <span>Lâmpadas</span>
+                    <span>Papéis e Papelão</span>
                 </li>
                 <li data-id="4">
                     <img src="/assets/eletronicos.svg" alt="Icone de resíduo eletrônicos">
-                    <span>Lâmpadas</span>
+                    <span>Resíduos e Eletrônicos</span>
                 </li>
                 <li data-id="5">
                     <img src="/assets/organincos.svg" alt="Icone de resíduos orgânicos">
-                    <span>Lâmpadas</span>
+                    <span>Resíduos e Orgânicos</span>
                 </li>
                 <li data-id="6">
                     <img src="/assets/oleo.svg" alt="Icone de óleo de cozinha">
-                    <span>Lâmpadas</span>
+                    <span>óleo de cozinha</span>
                 </li>
             </div>
             <input type="hidden" name="itens">
@@ -93,6 +94,12 @@
         <button type="submit">Cadastrar ponto de coleta</button>
     </form>
 {%endblock content%}
+
+{%block modal%}
+    {% if saved %}
+        {%include "partials/save-point-modal.html"%}
+    {% endif %}
+{%endblock modal%}
 
 {%block scripts%}
     <script src="/scripts/create-point.js"></script>

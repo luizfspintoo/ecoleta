@@ -13,29 +13,38 @@
 {%block content%}
     {% include "partials/page-header.html"%}
     <main>
+        {% if total > 0 %}
         <h4>
-            <strong>2 pontos</strong> encontrados
+            <strong>{{total}} pontos</strong> encontrados
         </h4>
 
+       
         <div class="cards">
+            {% for place in places %}
             <div class="card">
-                <img src="/assets/recilagem.jpg" alt="Coleteria">
-                <h1>Coleteria</h1>
-                <h3>Resídeos eletrônicos</h3>
+                <img src="{{place.image}}" alt="Coleteria">
+                <h1>{{place.name}}</h1>
+                <h3>{{place.items}}</h3>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, harum facilis optio accusantium ut, neque
-                    mollitia eum ullam
+                    {{place.city}}, {{place.state}}
+                </p>
+                <br>
+                <p>
+                    {{place.address}}
+                </p>
+                <br>
+                <p>
+                     {{place.address2}}
                 </p>
             </div>
-            <div class="card">
-                <img src="/assets/papelao.jpg" alt="Paperside">
-                <h1>Paperside</h1>
-                <h3>Resídeos eletrônicos</h3>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, harum facilis optio accusantium ut, neque
-                    mollitia eum ullam
-                </p>
-            </div>
+            {% endfor %}
         </div>
+
+        {% else %}
+
+        <h4><strong>Nenhum</strong> local encontrados</h4>
+        {% endif %}
+
+        
     </main>
 {%endblock content%}
