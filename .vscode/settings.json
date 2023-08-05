@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/974073da-0bbf-430a-9d13-2aa90f0907f4/resourceGroups/rocket/providers/Microsoft.Web/sites/ecoleta",
+    "appService.deploySubpath": "."
+}
