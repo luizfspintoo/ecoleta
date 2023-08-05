@@ -1,13 +1,14 @@
 {
   "name": "ecoleta",
   "version": "1.0.0",
+  "description": "Projeto Ecoleta, Server-side com cadastro de pontos de coletas e busca por pontos através de cidades",
   "main": "src/server.js",
   "scripts": {
     "dev": "nodemon src/server.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["Implantação da aplicação node.js front-end e back-end"],
+  "author": "Luiz Felipe",
+  "license": "MIT",
   "dependencies": {
     "express": "^4.18.2",
     "nunjucks": "^3.2.4",
