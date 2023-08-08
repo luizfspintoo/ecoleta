@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "Projeto Ecoleta, Server-side com cadastro de pontos de coletas e busca por pontos através de cidades",
   "main": "src/server.js",
+  "engines": {
+    "node": "18.x"
+  },
   "scripts": {
-    "dev": "nodemon src/server.js"
+    "start": "src/server.js"
   },
   "keywords": ["Implantação da aplicação node.js front-end e back-end"],
   "author": "Luiz Felipe",
