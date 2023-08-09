@@ -8,7 +8,7 @@ const database = require('./database/db');
 server.use(express.static("public"));
 
 //habilitar o uso, do corpo da requisição e pegar os dados do formulário
-server.use(express.urlencoded({extended: true}));
+server.use(express.urlencoded({ extended: true }));
 
 //configurar template engine, para trabalhar com lógicas no HTML
 const nunjucks = require("nunjucks");
@@ -30,14 +30,14 @@ server.get("/create-point", (req, res) => {
 })
 
 server.post("/save-point", (req, res) => {
-     const query = `
+    const query = `
          insert into places(
          name, image, address, address2, state, city, items
      ) values (
          ?, ?, ?, ?, ?, ?, ?
      );`
 
-     const values =  [
+    const values = [
         req.body.name,
         req.body.image,
         req.body.address,
@@ -45,28 +45,28 @@ server.post("/save-point", (req, res) => {
         req.body.state,
         req.body.city,
         req.body.items
-     ]
+    ]
 
-     function afterError(err) {
-         if(err) {
+    function afterError(err) {
+        if (err) {
             console.log(err);
             return res.send("Erro ao cadastrar")
-         }
-         console.log("Cadastrado com sucesso!");
-         console.log(this);
-         return res.render("create-point.html",  {saved: true});
-     }
-     database.run(query, values, afterError);
+        }
+        console.log("Cadastrado com sucesso!");
+        console.log(this);
+        return res.render("create-point.html", { saved: true });
+    }
+    database.run(query, values, afterError);
 
-    
+
 })
 
 server.get("/search-results", (req, res) => {
 
     const search = req.query.search
 
-    if(search === '') {
-        return res.render("search-results.html", {total: 0});
+    if (search === '') {
+        return res.render("search-results.html", { total: 0 });
     }
 
     else {
@@ -74,10 +74,10 @@ server.get("/search-results", (req, res) => {
             if (err) {
                 return console.log(err);
             }
-    
+
             const total = rows.length;
             //mostrar a página, com o card preenchido
-            return res.render("search-results.html", {places: rows, total: total});
+            return res.render("search-results.html", { places: rows, total: total });
         });
     }
 
