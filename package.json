@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "Projeto Ecoleta, Server-side com cadastro de pontos de coletas e busca por pontos através de cidades",
   "main": "src/server.js",
-  "engines": {
-    "node": "18.x"
-  },
   "scripts": {
     "start": "src/server.js"
   },
