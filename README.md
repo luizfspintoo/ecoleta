@@ -4,12 +4,11 @@
 Projeto que ajuda pessoas a encontrar pontos de coleta de materiais recicláveis em suas cidades, no Brasil</p>
 
 ## Demo
-
+<!--
 <p align="center">
   <img alt="projeto Ecoleta" src=".github/layout.png" width="100%">
 </p>
-
-
+-->
 ## 🚀 Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
